@@ -18,16 +18,16 @@
             </div>
             <nav class="main-nav style-menu">
                 <ul>
-                    <li>
-                        <a href="#">Студия</a>
+                    <li class="main-nav__item">
+                        <a href="index.html">Студия</a>
                     </li>
-                    <li>
+                    <li class="main-nav__item">
                         <a href="#">Клиенты</a>
                     </li>
-                    <li>
+                    <li class="main-nav__item">
                         <a class="current" href="#">Магазин</a>
                     </li>
-                    <li>
+                    <li class="main-nav__item">
                         <a href="#">Контакты</a>
                     </li>
                 </ul>
@@ -47,15 +47,20 @@
             <div class="catalog-filter__wrap">
                 <form class="filter-form" action="#" method="get">
                     <div class="filter-form__item">
-                        <p class="filter-form__title">ОТ 0 ДО 150000</p>
-                        <div class="filter-form__item-wrapper">
-                            <div class="filter-form__controls">
-                                <div class="filter-form__toggle filter-form__toggle--left"></div>
-                                <div class="filter-form__controls-active"></div>
-                                <div class="filter-form__toggle  filter-form__toggle--right"></div>
-                            </div>
+                        <span class="filter-form__title">Стоимость:</span>
+                        <div class="filter-form__range">
+                          <div class="filter-form__scale">
+                            <div class="filter__bar"></div>
+                          </div>
+                          <div class="filter-form__toggle filter-form__toggle--min"></div>
+                          <div class="filter-form__toggle filter-form__toggle--max"></div>
+                        </div>
+                        <div class="filter-form__price">
+                          <label class="filter-form__value filter-form__value--min-price">от <input class="filter-form__value-input" name="min-price" type="text" value="0"></label>
+                          <label class="filter-form__value filter-form__value--max-price">до <input class="filter-form__value-input" name="max-price" type="text" value="15000"></label>
                         </div>
                     </div>
+
                     <fieldset class="filter-form__item">
                         <legend>Сетка</legend>
                         <ul class="web">
@@ -119,12 +124,11 @@
 
                         </ul>
                     </fieldset>
-                    <button class="btn" type="submit">Показать</button>
+                    <button class="btn filter__button" type="submit">Показать</button>
                 </form>
             </div>
-        </section>
-
-        <div class="sort">
+            <div>
+            <div class="sort">
             <div class="sort-filter">
                 <h2>Сортировать:</h2>
                 <ul class="sort-filter__types">
@@ -146,7 +150,9 @@
                 </ul>
             </div>
         </div>
-        <section class="result-content">
+
+
+            <section class="result-content">
             <article class="product-item">
                 <div class="product-item__layout-top">
                     <span></span>
@@ -255,37 +261,53 @@
                 </div>
             </article>
         </section>
+            </div>
+
+        </section>
+
+
         <div class="paginator">
             <ul class="paginator-items">
-                <li><a class="btn current" href="#">1</a></li>
-                <li> <a class="btn" href="#">2</a></li>
-                <li><a class="btn" href="#">3</a></li>
-                <li><a class="btn next" href="#">Следующая</a></li>
+                <li><a class="paginator--current paginator__link" href="#">1</a></li>
+                <li> <a class="paginator__link" href="#">2</a></li>
+                <li><a class="paginator__link" href="#">3</a></li>
+                <li><a class="paginator__link paginator--next" href="#">Следующая</a></li>
             </ul>
         </div>
     </main>
 
-
     <footer class="page-footer container">
-
-        <div class="social-links">
-
-            <h2 class="visually-hidden">Мы в социальных сетях</h2>
-            <div class="social-links">
-                <ul class="social-links__items">
-                    <li class="social-links__item"><a class="circle  vk" href="https://vk.com" target="blank">
-                            VKontakte</a></li>
-                    <li class="social-links__item"> <a class="circle fb" href="https://ru-ru.facebook.com/"
-                            target="blank"> facebook </a></li>
-                    <li class="social-links__item"><a class="circle inst" href="https://www.instagram.com"
-                            target="blank"> instagram</a></li>
-                </ul>
-            </div>
-            <div class="footer-info">
-                <b>Давайте дружить, это выгодно!</b>
-                <p>Скидка 10% для друзей из социальных сетей.</p>
-            </div>
+      <h2 class="visually-hidden">Мы в социальных сетях</h2>
+      <div class="social-links">
+        <ul class="social-links__items">
+          <li class="social-links__item"><a class="circle  vk" href="https://vk.com" target="blank" alt="VKontakte"></a></li>
+          <li class="social-links__item"> <a class="circle fb" href="https://ru-ru.facebook.com/" target="blank" alt="facebook">
+            </a></li>
+          <li class="social-links__item"><a class="circle inst" href="https://www.instagram.com" target="blank" alt="instagram">
+              </a></li>
+        </ul>
+      </div>
+      <div class="footer-info">
+        <b>Давайте дружить, это выгодно!</b>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
     </footer>
+    <div class="modal">
+      <div class="modal__wr">
+      <button class="modal__close" type="button" title="Закрыть">Закрыть</button>
+      <span class="modal__title">Напишите нам!</span>
+      <form class="modal__form" action="#" method="post">
+        <label class="modal__text" for="login">Ваше имя
+        <input class="modal__input modal__input--login" id="login" type="text" name="login" placeholder="Представьтесь, пожалуйста">
+        </label>
+        <label class="modal__text" for="email">Ваш e-mail
+        <input class="modal__input modal__input--mail" type="email" name="email" id="email" placeholder="Для отправки ответа">
+        </label>
+        <p class="modal__text modal__text--comment">Текст письма
+        <textarea class="modal__comment" name="comment" id="comment-field" rows="4" placeholder="В свободной форме"></textarea></p>
+        <button class="btn" type="submit">Отправить</button>
+      </form>
+      </div>
 </body>
 
 </html>
