@@ -11,43 +11,45 @@
 </head>
 
 <body>
-    <header class="page-header">
-        <div class="container">
-            <div class="page-header__logo">
-                <a><img width="160px" height="65px" src="img/decor/nerds-logo.svg" alt="Nerds"></a>
-            </div>
-            <nav class="main-nav style-menu">
-                <ul>
-                    <li class="main-nav__item">
-                        <a href="index.html">Студия</a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="#">Клиенты</a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a class="current" href="#">Магазин</a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="#">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="backet style-menu">
-                <a href="#">Корзина</a>
-            </div>
-        </div>
-    </header>
+  <header class="page-header">
+    <div class="container">
+    <div class="page-menu">
+      <div class="page-menu__logo">
+        <a href="index.html"><img width="160px" height="65px" src="img/decor/nerds-logo.svg" alt="Nerds"></a>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="index.html">Студия</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Клиенты</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="current" href="#">Магазин</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="backet">
+        <a href="#">Корзина</a>
+      </div>
+    </div>
+  </div>
+  </header>
 
     <main class="page-content">
         <div class="page-title slogan">
-            <h1>Магазин готовых шаблонов</h1>
+            <h1 class="main__title main__title--catalog">Магазин готовых шаблонов</h1>
         </div>
 
         <section class="catalog-filter container">
             <div class="catalog-filter__wrap">
                 <form class="filter-form" action="#" method="get">
                     <div class="filter-form__item">
-                        <span class="filter-form__title">Стоимость:</span>
+                        <span class="filter-form__title .filter-form__title--price">Стоимость:</span>
                         <div class="filter-form__range">
                           <div class="filter-form__scale">
                             <div class="filter__bar"></div>
@@ -62,7 +64,7 @@
                     </div>
 
                     <fieldset class="filter-form__item">
-                        <legend>Сетка</legend>
+                        <legend class="filter-form__title">Сетка</legend>
                         <ul class="web">
                             <li>
                                 <label>
@@ -89,7 +91,7 @@
                     </fieldset>
 
                     <fieldset class="filter-form__item">
-                        <legend>Особенности:</legend>
+                        <legend class="filter-form__title">Особенности:</legend>
                         <ul class="features">
                             <li>
                                 <label>
@@ -276,38 +278,41 @@
         </div>
     </main>
 
-    <footer class="page-footer container">
-      <h2 class="visually-hidden">Мы в социальных сетях</h2>
-      <div class="social-links">
-        <ul class="social-links__items">
-          <li class="social-links__item"><a class="circle  vk" href="https://vk.com" target="blank" alt="VKontakte"></a></li>
-          <li class="social-links__item"> <a class="circle fb" href="https://ru-ru.facebook.com/" target="blank" alt="facebook">
-            </a></li>
-          <li class="social-links__item"><a class="circle inst" href="https://www.instagram.com" target="blank" alt="instagram">
-              </a></li>
-        </ul>
+    <div class="conteiner">
+      <footer class="page-footer">
+        <h2 class="visually-hidden">Мы в социальных сетях</h2>
+          <div class="footer__items">
+            <a href="#" class="footer__item footer__item--vk">Вконтакте</a>
+            <a href="#" class="footer__item footer__item--fb">Фейсбук</a>
+            <a href="#" class="footer__item footer__item--ig">Инстаграмм</a>
+          </div>
+          <div class="footer__text">
+            <p class="footer__text-slogan">Давайте дружить, это выгодно!</p>
+            <p class="footer__text-offer">Скидка 10% для друзей из социальных сетей.</p>
+          </div>
+        </footer>
+    </div>
+      <div class="modal">
+        <div class="modal__wr">
+          <button class="modal__close" type="button" title="Закрыть">Закрыть</button>
+          <span class="modal__title">Напишите нам!</span>
+          <form class="modal__form" action="#" method="post">
+            <label class="modal__text" for="login">Ваше имя
+              <input class="modal__input modal__input--login" id="login" type="text" name="login"
+                placeholder="Представьтесь, пожалуйста">
+            </label>
+            <label class="modal__text" for="email">Ваш e-mail
+              <input class="modal__input modal__input--mail" type="email" name="email" id="email"
+                placeholder="Для отправки ответа">
+            </label>
+            <p class="modal__text modal__text--comment">Текст письма
+              <textarea class="modal__comment" name="comment" id="comment-field" rows="4"
+                placeholder="В свободной форме"></textarea></p>
+            <button class="btn" type="submit">Отправить</button>
+          </form>
+        </div>
       </div>
-      <div class="footer-info">
-        <b>Давайте дружить, это выгодно!</b>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
-      </div>
-    </footer>
-    <div class="modal">
-      <div class="modal__wr">
-      <button class="modal__close" type="button" title="Закрыть">Закрыть</button>
-      <span class="modal__title">Напишите нам!</span>
-      <form class="modal__form" action="#" method="post">
-        <label class="modal__text" for="login">Ваше имя
-        <input class="modal__input modal__input--login" id="login" type="text" name="login" placeholder="Представьтесь, пожалуйста">
-        </label>
-        <label class="modal__text" for="email">Ваш e-mail
-        <input class="modal__input modal__input--mail" type="email" name="email" id="email" placeholder="Для отправки ответа">
-        </label>
-        <p class="modal__text modal__text--comment">Текст письма
-        <textarea class="modal__comment" name="comment" id="comment-field" rows="4" placeholder="В свободной форме"></textarea></p>
-        <button class="btn" type="submit">Отправить</button>
-      </form>
-      </div>
-</body>
 
-</html>
+    </body>
+
+    </html>
