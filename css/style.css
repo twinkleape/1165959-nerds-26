@@ -501,10 +501,10 @@ iframe {
   box-sizing: border-box;
 }
 
-.contacts .a {
+.contacts a {
   background-color: #ffffff;
   color: #666666;
-
+text-decoration: none;
 }
 
 .contacts .btn {
@@ -878,6 +878,13 @@ iframe {
     -25px 0 0 0 #fff;
 }
 
+.logo-wr::after {
+  content: "";
+  border: 1px solid lightgrey;
+  margin: 40px;
+  border-top-width: 40px;
+}
+
 .product__info {
   position: absolute;
   height: 235px;
@@ -957,6 +964,7 @@ iframe {
 .web,
 .features {
   list-style-type: none;
+  padding: 0;
 }
 
 .features label {
@@ -1111,9 +1119,23 @@ iframe {
   height: 23px;
   background: #ffffff url("../img/decor/checkbox-on.svg") no-repeat;
   z-index: 10;
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
+.radio:checked+.radio-custom::before {
+  content: "";
+  display: block;
+  position: absolute;
+
+  top: -3px;
+  left: -3px;
+
+  width: 27px;
+  height: 23px;
+  background: #ffffff url("../img/decor/radio-on.svg") no-repeat;
+  z-index: 10;
+  opacity: 0.2;
+}
 
 
 
