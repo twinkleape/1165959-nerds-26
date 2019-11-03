@@ -1,4 +1,6 @@
 body {
+  min-width: 1200px;
+
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
@@ -41,7 +43,7 @@ body {
 
 .main-nav {
   display: flex;
-  min-width: 440px;
+  flex-wrap: wrap;
   min-width: 490px;
   margin-left: 200px;
 }
@@ -51,6 +53,8 @@ body {
 
   display: inline-block;
   margin-right: 46px;
+
+  vertical-align: middle;
 }
 
 .page-menu__logo {
@@ -150,6 +154,7 @@ body {
   height: 18px;
   margin: 0 6px;
 
+  vertical-align: middle;
   vertical-align: top;
 
   background: #ffffff;
@@ -284,6 +289,7 @@ body {
 
 .info-items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 80px;
   padding-bottom: 80px;
@@ -479,6 +485,7 @@ body {
 
 .logos__wrap {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 80px;
   padding: 45px 0 39px 0;
@@ -496,16 +503,20 @@ body {
 
 .logo__wrap {
   display: inline-block;
+
+  vertical-align: middle;
 }
 
-.logo-wr:first-child,
+.logo-wr:first-child {
+  width: 250px;
+}
 .logo-wr:last-child {
-  width: 265px;
+  width: 210px;
 }
 
 .logo-wr:nth-child(2),
 .logo-wr:nth-child(3) {
-  width: 302px;
+  width: 245px;
 }
 
 .logo-wr:first-child {
@@ -514,16 +525,16 @@ body {
 }
 
 .logo-wr:nth-child(2) {
-  padding-left: 80px;
+  padding-left: 45px;
 }
 
 .logo-wr:nth-child(3) {
-  padding-left: 65px;
+  padding-left: 68px;
 }
 
 .logo-wr:last-child {
   padding-top: 5px;
-  padding-left: 55px;
+  padding-left: 60px;
 }
 
 .logo-wr::after {
@@ -539,15 +550,15 @@ body {
 }
 
 .logo__wr--academy::after {
-  right: -32px;
+  right: 0;
 }
 
 .logo__wr--borodiskii::after {
-  right: -6px;
+  right: -10px;
 }
 
 .logo__wr--pink::after {
-  right: 7px;
+  right: 2px;
 }
 
 .logo__wr--mishka::after {
@@ -605,6 +616,8 @@ body {
   width: 219px;
   margin-top: auto;
 
+  color: white;
+
   background-color: #fb565a;
   border: none;
 }
@@ -634,6 +647,7 @@ body {
 
 .footer__items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 260px;
   margin-right: 140px;
@@ -760,6 +774,7 @@ body {
   padding: 15px;
 
   line-height: 18px;
+  vertical-align: middle;
   color: #a1a1a1;
 
   border: 2px solid #d7dcde;
@@ -786,6 +801,8 @@ body {
 .modal__text {
   display: inline-block;
   width: 360px;
+
+  vertical-align: middle;
 }
 
 .modal__text--comment {
@@ -855,6 +872,7 @@ body {
   font-weight: 600;
   font-size: 18px;
   line-height: 18px;
+  vertical-align: middle;
   text-transform: uppercase;
 }
 
@@ -864,6 +882,7 @@ body {
   padding: 0;
 
   list-style: none;
+  vertical-align: middle;
   text-transform: uppercase;
 
   border: 0;
@@ -875,6 +894,7 @@ body {
 
   font-size: 14px;
   line-height: 18px;
+  vertical-align: middle;
 }
 
 .sort__catalog-item a {
@@ -901,10 +921,14 @@ body {
 .catalog__toggle-list {
   display: inline-block;
   margin-left: 43px;
+
+  vertical-align: middle;
 }
 
 .catalog__toggle {
   display: inline-block;
+
+  vertical-align: middle;
 
   cursor: pointer;
 }
@@ -994,8 +1018,8 @@ body {
   display: none;
   box-sizing: border-box;
   width: 100%;
-  height: 235px;
   margin-top: 350px;
+  padding-bottom: 47px;
 
   background-color: #eeeeee;
 }
@@ -1008,7 +1032,9 @@ body {
   text-align: center;
   text-align: center;
 }
-
+.product__info-wr a {
+  text-decoration: none;
+}
 .product__description {
   display: inline-block;
   margin: 0;
@@ -1016,6 +1042,7 @@ body {
 
   font-size: 16px;
   line-height: 18px;
+  vertical-align: middle;
   color: #939393;
 }
 
@@ -1024,8 +1051,9 @@ body {
   padding: 26px 0 13px 0;
 
   font-size: 18px;
-  line-height: 30px;
+  line-height: 32px;
   text-align: center;
+  color: #283136;
   text-transform: uppercase;
 }
 
@@ -1041,6 +1069,7 @@ body {
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
+  vertical-align: middle;
   text-transform: uppercase;
 }
 
@@ -1165,6 +1194,7 @@ body {
   width: 50%;
 
   font-size: 16px;
+  vertical-align: middle;
   text-transform: uppercase;
 }
 
@@ -1262,6 +1292,7 @@ body {
 
 .paginator {
   display: flex;
+  flex-wrap: wrap;
   padding-top: 24px;
 }
 
@@ -1296,6 +1327,7 @@ body {
 
   font-size: 16px;
   line-height: 18px;
+  vertical-align: middle;
   vertical-align: top;
   color: #2e2e2e;
   text-transform: uppercase;
