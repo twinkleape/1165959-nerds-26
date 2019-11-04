@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <title> Nerds: Catalog</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+
 </head>
 <body>
   <header class="page-header">
@@ -48,8 +49,10 @@
             <div class="filter-form__scale">
               <div class="filter__bar"></div>
             </div>
-            <div class="filter-form__toggle filter-form__toggle--min"></div>
-            <div class="filter-form__toggle filter-form__toggle--max"></div>
+            <div class="filter-form__toggle filter-form__toggle--min">
+              <div class="visually-hidden">от 0</div>
+            </div>
+            <div class="filter-form__toggle filter-form__toggle--max"><div class="visually-hidden">до 20000</div></div>
           </div>
           <div class="filter-form__price">
             <label class="filter-form__value filter-form__value--min-price">От<input class="filter-form__value-input"
@@ -63,21 +66,21 @@
           <ul class="web">
             <li>
               <label>
-                <input class="radio" type="radio" name="web-types" checked>
+                <input class="visually-hidden radio" type="radio" name="web-types" checked>
                 <span class="radio-custom"></span>
                 <span class="label">Адаптивная</span>
               </label>
             </li>
             <li>
               <label>
-                <input class="radio" type="radio" name="web-types">
+                <input class="visually-hidden radio" type="radio" name="web-types">
                 <span class="radio-custom"></span>
                 <span class="label">Фиксированная</span>
               </label>
             </li>
             <li>
               <label>
-                <input class="radio" type="radio" name="web-types">
+                <input class="visually-hidden radio" type="radio" name="web-types">
                 <span class="radio-custom"></span>
                 <span class="label">Резиновая</span>
               </label>
@@ -89,31 +92,31 @@
           <ul class="features">
             <li>
               <label>
-                <input class="checkbox" type="checkbox" name="features" checked>
+                <input class="visually-hidden checkbox" type="checkbox" name="features" checked>
                 <span class="checkbox-custom"></span>
                 <span class="label">Слайдер</span>
               </label></li>
             <li>
               <label>
-                <input class="checkbox" type="checkbox" name="features">
+                <input class="visually-hidden checkbox" type="checkbox" name="features">
                 <span class="checkbox-custom"></span>
                 <span class="label">Блок преимуществ</span>
               </label></li>
             <li>
               <label>
-                <input class="checkbox" type="checkbox" name="features" checked="">
+                <input class="visually-hidden checkbox" type="checkbox" name="features" checked="">
                 <span class="checkbox-custom"></span>
                 <span class="label">Новости</span>
               </label></li>
             <li>
               <label>
-                <input class="checkbox" type="checkbox" name="features">
+                <input class="checkbox visually-hidden" type="checkbox" name="features">
                 <span class="checkbox-custom"></span>
                 <span class="label">Галерея</span>
               </label></li>
             <li>
               <label>
-                <input class="checkbox" type="checkbox" name="features">
+                <input class="checkbox visually-hidden" type="checkbox" name="features">
                 <span class="checkbox-custom"></span>
                 <span class="label">Корзина</span>
               </label></li>
